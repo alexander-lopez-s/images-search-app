@@ -1,3 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Righteous', Courier, monospace;
+  background-color: #84b5b2;
+  padding-top: 10px;
+  height: 700px;
+}
+
+.rainbow-text {
+  font-size: 50px;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(right, orange , yellow, green, violet); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, orange , yellow, cyan, blue, violet); /* Standard syntax (must be last) */  
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.25px black;
+
+}
+
+
+input {
+  height:45px;
+  border: 1px solid #dcdcdc;
+  width: 400px;
+  font-size: 16px;
+  outline: none;
+  border-radius: 10px;
+  padding-left: 35px;
+} 
+
+button {
+  background-color: rgb(215, 238, 6);  
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 8px;
+  outline: 0;
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+  border-color: transparent;
+}
+
+button:hover {
+  background-color: rgb(19, 134, 34);
+  color: #dcdcdc;
+}
+
+.results-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 5px;
+  background-color: #84b5b2;
+}
+
+img {
+  cursor: pointer;
 }
