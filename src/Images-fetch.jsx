@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios"; // method used to feth the images
 import { useState } from "react";
 import { FcPicture } from 'react-icons/fc';
+import { AiFillHeart } from 'react-icons/ai';
 
 
 const SearchImages = () => {
@@ -38,8 +39,10 @@ const SearchImages = () => {
     <div className="results-container">
       {result.map((image) => (
       <>
-       <div className="card">
-        <img src={image.urls.small_s3} alt="searched-img" key={image.user.id}/>
+       <div className="card" key={image.user.alt_description}>
+        <img src={image.urls.small_s3} alt="searched-img"/>
+         <p> Created by: {image.user.username}</p>
+         <p> Likes: <AiFillHeart color="red"/>  {image.likes}  || <a href="google.com">Download</a></p>
        </div>
       </>
        ))}
