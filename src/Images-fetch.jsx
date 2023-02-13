@@ -42,7 +42,7 @@ const SearchImages = () => {
        <div className="card" key={image.user.alt_description}>
         <img src={image.urls.small_s3} alt="searched-img"/>
          <p> Created by: {image.user.username}</p>
-         <p> Likes: <AiFillHeart color="red"/>  {image.likes}  || <a href={image.urls.full} download>Download</a></p>
+         <p> Likes: <AiFillHeart color="red"/>  {image.likes}  || <a href={image.urls.full}  rel="noreferrer" target="_blank" download>Download</a></p>
        </div>
       </>
        ))}
