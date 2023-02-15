@@ -7,7 +7,6 @@ import { AiFillHeart } from 'react-icons/ai';
 
 
 const SearchImages = () => {
-
     const [image, setImage] = useState(""); // initial value in the search bar is an empty string
     const clientId = "psvrhREoE8Ri_8XHMUOQqWLpYD2e52MUBH6Y8q6s370"; // API key provided by Unsplash website
     const [result, setResult] = useState([]); // state to save the user's search 
@@ -32,7 +31,7 @@ const SearchImages = () => {
      <div className="container">
        <h1 className="rainbow-text">Pics Finder <FcPicture /> </h1>
      <div className="search-section-container">
-      <input onChange={handleChange} type="text" name="image-finder" onFocus={(e) => e.target.placeholder = ""} 
+      <input onKeyPress={(e) => {if (e.key === "Enter") {handleSubmit()}}} onChange={handleChange} type="text" name="image-finder" onFocus={(e) => e.target.placeholder = ""} 
   onBlur={(e) => e.target.placeholder = "Type your search"} placeholder="Type your search"/>
      </div>
       <button onClick={handleSubmit} type="submit">Search</button>
