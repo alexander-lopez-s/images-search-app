@@ -26,7 +26,7 @@ const SearchImages = () => {
     axios.get(url).then((response) => {
     setResult(response.data.results); // the 'response' which is an object, is being saved in the setResult
     setImgCounter(response.data.total);  
-    setResultsTxt("images found");
+    setResultsTxt("image(s) found");
   });
     };
     
