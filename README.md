@@ -12,3 +12,11 @@
 ![Pics-finder](https://res.cloudinary.com/dembmmjyq/image/upload/v1676561751/Screenshot_2023-02-16_at_16.32.16_wjuveg.png)
 
 ![Pics-finder](https://res.cloudinary.com/dembmmjyq/image/upload/v1676561937/Screenshot_2023-02-16_at_16.38.35_d7xkhf.png)
+
+## Technologies used
+
+1. HTML
+2. CSS
+3. React JS
+4. Cloudinary
+5. Unsplash API
