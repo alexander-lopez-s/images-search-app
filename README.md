@@ -1,4 +1,14 @@
 # Images finder using Unsplash API and React
 
-![Screenshot 2023-02-05 at 16 08 39](https://user-images.githubusercontent.com/97364283/216827485-ae14eabb-f647-4747-a325-93f8680304c5.png)
-![Screenshot 2023-02-05 at 16 09 09](https://user-images.githubusercontent.com/97364283/216827510-927e7e64-f3b7-4e55-b596-1108a53f21a1.png)
+## Features
+
+1. Searches for any images hosted on https://unsplash.com/
+2. Engine returns 24 images per search 
+3. Counter of the total amount of images found
+4. "Likes" counter shows the number of likes the image has received on the above mentioned website.
+5. Owner of the image is displayed
+6. Ability of viewing the image in its full size available
+
+![Pics-finder](https://res.cloudinary.com/dembmmjyq/image/upload/v1676561751/Screenshot_2023-02-16_at_16.32.16_wjuveg.png)
+
+![Pics-finder](https://res.cloudinary.com/dembmmjyq/image/upload/v1676561937/Screenshot_2023-02-16_at_16.38.35_d7xkhf.png)
