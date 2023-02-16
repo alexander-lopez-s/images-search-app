@@ -10,6 +10,8 @@ const SearchImages = () => {
     const [image, setImage] = useState(""); // initial value in the search bar is an empty string
     const clientId = "psvrhREoE8Ri_8XHMUOQqWLpYD2e52MUBH6Y8q6s370"; // API key provided by Unsplash website
     const [result, setResult] = useState([]); // state to save the user's search 
+    const [imgCounter, setImgCounter] = useState([]);
+    const [resultsTxt, setResultsTxt] = useState("");
 
     // function to grab the user's input in the search bar
     const handleChange = (event) => {
@@ -22,9 +24,10 @@ const SearchImages = () => {
     const url = "https://api.unsplash.com/search/photos?page=1&query=" + image + "&client_id=" + clientId + "&orientation=landscape&per_page=24";
     // fectching the data that the user is searching for
     axios.get(url).then((response) => {
-    console.log(response);
     setResult(response.data.results); // the 'response' which is an object, is being saved in the setResult
-    });
+    setImgCounter(response.data.total);  
+    setResultsTxt("images found");
+  });
     };
     
     return (
@@ -35,8 +38,13 @@ const SearchImages = () => {
   onBlur={(e) => e.target.placeholder = "Type your search"} placeholder="Type your search"/>
      </div>
       <button onClick={handleSubmit} type="submit">Search</button>
+
+      <div><p className="results-count">  {imgCounter} {resultsTxt} </p></div>
+
+
     <div className="results-container">
       {result.map((image) => (
+        
       <>
        <div className="card" key={image.user.alt_description}>
         <img src={image.urls.small_s3} alt="searched-img"/>
